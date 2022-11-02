@@ -1,0 +1,16 @@
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\bin\Debug\AplikacjaSzyfrow.exe.config
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\bin\Debug\AplikacjaSzyfrow.exe
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\bin\Debug\AplikacjaSzyfrow.pdb
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\AplikacjaSzyfrow.csproj.AssemblyReference.cache
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\AplikacjaSzyfrow.csproj.SuggestedBindingRedirects.cache
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\MainWindow.g.cs
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\App.g.cs
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\AplikacjaSzyfrow_MarkupCompile.cache
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\AplikacjaSzyfrow_MarkupCompile.lref
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\MainWindow.baml
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\AplikacjaSzyfrow.g.resources
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\AplikacjaSzyfrow.Properties.Resources.resources
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\AplikacjaSzyfrow.csproj.GenerateResource.cache
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\AplikacjaSzyfrow.csproj.CoreCompileInputs.cache
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\AplikacjaSzyfrow.exe
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\AplikacjaSzyfrow.pdb

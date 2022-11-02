@@ -1,0 +1,15 @@
+﻿<Window x:Class="AplikacjaSzyfrow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AplikacjaSzyfrow"
+        mc:Ignorable="d"
+        Title="Szyfry" Height="378" Width="310">
+    <Grid Margin="-1,0,0,2">
+        <Button Content="Szyfr Cezara" Margin="26,77,0,0" VerticalAlignment="Top" Height="60" HorizontalAlignment="Left" Width="100"/>
+        <Button Content="Szyfr Polibiusza" Margin="165,77,0,0" VerticalAlignment="Top" Height="60" HorizontalAlignment="Left" Width="100"/>
+        <Label Content="Wybierz Szyfr" HorizontalAlignment="Left" Margin="104,28,0,0" VerticalAlignment="Top" Width="84"/>
+
+    </Grid>
+</Window>
