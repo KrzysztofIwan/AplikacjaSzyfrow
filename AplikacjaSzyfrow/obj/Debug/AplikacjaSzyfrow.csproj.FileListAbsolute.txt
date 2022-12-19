@@ -14,3 +14,5 @@ E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\AplikacjaSzyfrow.csproj.Genera
 E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\AplikacjaSzyfrow.csproj.CoreCompileInputs.cache
 E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\AplikacjaSzyfrow.exe
 E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\AplikacjaSzyfrow.pdb
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\Views\CezarView.g.cs
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\Views\CezarView.baml

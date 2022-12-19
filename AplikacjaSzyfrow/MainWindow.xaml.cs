@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AplikacjaSzyfrow.ViewModels;
+using AplikacjaSzyfrow.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,21 @@ namespace AplikacjaSzyfrow
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        public void CerazShow(object sender, RoutedEventArgs e)
+        {
+            DataContext = new CezarModel();
+            CezarView page = new CezarView();
+            page.ShowDialog();
+        }
+        public void PolibiuszShow(object sender, RoutedEventArgs e)
+        {
+
+        }
+        public void VigenèreShow(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

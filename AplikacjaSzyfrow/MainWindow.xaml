@@ -5,11 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AplikacjaSzyfrow"
         mc:Ignorable="d"
-        Title="Szyfry" Height="378" Width="310">
+        Title="Szyfry" Height="300" Width="300">
     <Grid Margin="-1,0,0,2">
-        <Button Content="Szyfr Cezara" Margin="26,77,0,0" VerticalAlignment="Top" Height="60" HorizontalAlignment="Left" Width="100"/>
+        <Button Content="Szyfr Cezara" Click="CerazShow"  Margin="26,77,0,0" VerticalAlignment="Top" Height="60" HorizontalAlignment="Left" Width="100"/>
         <Button Content="Szyfr Polibiusza" Margin="165,77,0,0" VerticalAlignment="Top" Height="60" HorizontalAlignment="Left" Width="100"/>
         <Label Content="Wybierz Szyfr" HorizontalAlignment="Left" Margin="104,28,0,0" VerticalAlignment="Top" Width="84"/>
+        <Button Content="Szyfr Vigenère’a" Margin="26,175,0,0" VerticalAlignment="Top" Height="60" HorizontalAlignment="Left" Width="100"/>
+        <Button Content="NOWY SZYFR" Margin="165,175,0,0" VerticalAlignment="Top" Height="60" HorizontalAlignment="Left" Width="100"/>
 
     </Grid>
 </Window>
