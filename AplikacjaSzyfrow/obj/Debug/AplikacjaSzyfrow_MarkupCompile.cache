@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\App.xaml
-2-1924205935
+4-1750726497
 
-7-430186112
+111044322720
 13-1310406943
-MainWindow.xaml;Views\CezarView.xaml;
+MainWindow.xaml;Views\CezarView.xaml;Views\PolibiuszView.xaml;Views\VigenereView.xaml;
 
 False
 

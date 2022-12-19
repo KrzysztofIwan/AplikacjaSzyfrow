@@ -16,3 +16,7 @@ E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\AplikacjaSzyfrow.exe
 E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\AplikacjaSzyfrow.pdb
 E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\Views\CezarView.g.cs
 E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\Views\CezarView.baml
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\Views\PolibiuszView.g.cs
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\Views\VigenereView.g.cs
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\Views\PolibiuszView.baml
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\Views\VigenereView.baml

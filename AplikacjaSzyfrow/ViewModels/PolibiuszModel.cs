@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AplikacjaSzyfrow.ViewModels
 {
-    public class PolibiuszModelINotifyPropertyChanged
+    public class PolibiuszModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
     }
