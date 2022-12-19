@@ -35,11 +35,15 @@ namespace AplikacjaSzyfrow
         }
         public void PolibiuszShow(object sender, RoutedEventArgs e)
         {
-
+            DataContext = new PolibiuszModel();
+            PolibiuszView page = new PolibiuszView();
+            page.ShowDialog();
         }
         public void VigenèreShow(object sender, RoutedEventArgs e)
         {
-
+            DataContext = new VigenereModel();
+            VigenereView page = new VigenereView();
+            page.ShowDialog();
         }
     }
 }

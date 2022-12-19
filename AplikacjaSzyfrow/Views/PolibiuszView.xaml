@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="PolibiuszView" Height="450" Width="800">
     <Grid>
-        
+        <Label Content="POLIBIUSZ" FontSize="30" HorizontalAlignment="Left" Height="97" Margin="207,120,0,0" VerticalAlignment="Top" Width="324"/>
+
     </Grid>
 </Window>

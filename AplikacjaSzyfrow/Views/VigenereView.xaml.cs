@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using AplikacjaSzyfrow.ViewModels;
 
 namespace AplikacjaSzyfrow.Views
 {
@@ -22,6 +23,7 @@ namespace AplikacjaSzyfrow.Views
         public VigenereView()
         {
             InitializeComponent();
+            DataContext = new VigenereModel();
         }
     }
 }

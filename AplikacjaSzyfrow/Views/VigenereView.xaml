@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="VigenereView" Height="450" Width="800">
     <Grid>
-        
+        <TextBlock HorizontalAlignment="Left" Margin="136,198,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="79" Width="129"/>
+        <Label Content="VIGENERE" FontSize="30" HorizontalAlignment="Left" Margin="434,124,0,0" VerticalAlignment="Top" Height="112" Width="238"/>
+
     </Grid>
 </Window>

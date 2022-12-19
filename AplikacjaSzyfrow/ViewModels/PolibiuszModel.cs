@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace AplikacjaSzyfrow.ViewModels
 {
-    internal class PolibiuszModel
+    public class PolibiuszModelINotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }
