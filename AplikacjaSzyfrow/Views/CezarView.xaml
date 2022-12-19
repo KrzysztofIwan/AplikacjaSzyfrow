@@ -7,9 +7,13 @@
         mc:Ignorable="d"
         Title="CezarView" Height="450" Width="800">
     <Grid>
-        <Button Content="Szyfruj" HorizontalAlignment="Left" Margin="154,291,0,0" VerticalAlignment="Top" Height="50" Width="135"/>
-        <Button Content="Odszyfruj" HorizontalAlignment="Left" Margin="510,291,0,0" VerticalAlignment="Top" Height="50" Width="135"/>
-        <Label Content="Szyfr cezara" HorizontalAlignment="Left" Margin="310,60,0,0" VerticalAlignment="Top" Width="214"/>
+        <Button Content="Szyfruj" HorizontalAlignment="Left" Margin="154,250,0,0" VerticalAlignment="Top" Height="50" Width="136"/>
+        <Button Content="Odszyfruj" HorizontalAlignment="Left" Margin="510,250,0,0" VerticalAlignment="Top" Height="50" Width="136"/>
+        <Label Content="Szyfr Cezara" FontSize="30" Margin="125,50,125,0" VerticalAlignment="Top" Width="150"/>
+        <TextBox Margin="90,171,446,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="63"/>
+        <TextBox Margin="446,171,90,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="63"/>
+        <Label Content="Tekst do zaszyfrowania" HorizontalAlignment="Left" Margin="157,140,0,0" VerticalAlignment="Top"/>
+        <Label Content="Zaszyfrowany tekst" HorizontalAlignment="Left" Margin="523,140,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

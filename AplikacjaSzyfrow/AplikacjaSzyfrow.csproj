@@ -55,9 +55,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ViewModels\CezarModel.cs" />
-    <Compile Include="ViewModels\PolibiuszModel.cs" />
-    <Compile Include="ViewModels\VigenereModel.cs" />
     <Compile Include="Views\CezarView.xaml.cs">
       <DependentUpon>CezarView.xaml</DependentUpon>
     </Compile>
