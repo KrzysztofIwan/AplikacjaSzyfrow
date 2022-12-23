@@ -24,5 +24,15 @@ namespace AplikacjaSzyfrow.Views
         {
             InitializeComponent();
         }
+
+        public void Szyfrowanie(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Szyfrowanie");
+        }
+
+        public void Odszyfruj(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Odszyfrowywanie");
+        }
     }
 }

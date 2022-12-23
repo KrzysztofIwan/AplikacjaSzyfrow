@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="PolibiuszView" Height="450" Width="800">
     <Grid>
-        <Button Content="Szyfruj" HorizontalAlignment="Left" Margin="154,250,0,0" VerticalAlignment="Top" Height="50" Width="136"/>
-        <Button Content="Odszyfruj" HorizontalAlignment="Left" Margin="510,250,0,0" VerticalAlignment="Top" Height="50" Width="136"/>
-        <Label Content="Szyfr Polibiusza" FontSize="30" Margin="274,49,274,0" VerticalAlignment="Top"/>
+        <Button Content="Szyfruj" Click ="Szyfrowanie" HorizontalAlignment="Left" Margin="154,250,0,0" VerticalAlignment="Top" Height="50" Width="136"/>
+        <Button Content="Odszyfruj" Click="Odszyfruj" HorizontalAlignment="Left" Margin="510,250,0,0" VerticalAlignment="Top" Height="50" Width="136"/>
+        <Label Content="Szyfr Polibiusza" FontSize="30" Margin="274,50,274,0" VerticalAlignment="Top"/>
         <TextBox Margin="90,171,446,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="63"/>
         <TextBox Margin="446,171,90,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="63"/>
         <Label Content="Tekst do zaszyfrowania" HorizontalAlignment="Left" Margin="157,140,0,0" VerticalAlignment="Top"/>
