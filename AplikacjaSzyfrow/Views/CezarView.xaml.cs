@@ -28,42 +28,57 @@ namespace AplikacjaSzyfrow.Views
 
         public void Szyfrowanie(object sender, RoutedEventArgs e)
         {
-            string text = this.JawnyTEXT.Text.ToString();
-            int przesuniecie = 2;
-            if (!String.IsNullOrEmpty(text))
+            if (!String.IsNullOrEmpty(this.JawnyTEXT.Text.ToString()) && int.Parse(this.Przesuniecie.Text) > 0)
             {
-                StringBuilder zaszyforwane = WykonajSzyfrowanie(text, przesuniecie);
-                this.ZaszyfrowanyTEXT.Text = zaszyforwane.ToString();
+                this.ZaszyfrowanyTEXT.Text = Encipher(this.JawnyTEXT.Text.ToString(), int.Parse(this.Przesuniecie.Text));
             }
 
         }
 
         public void Odszyfruj(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Odszyfrowywanie");
+            if (!String.IsNullOrEmpty(this.ZaszyfrowanyTEXT.Text.ToString()) && int.Parse(this.Przesuniecie.Text) > 0)
+            {
+                this.JawnyTEXT.Text = Decipher(this.ZaszyfrowanyTEXT.Text.ToString(), int.Parse(this.Przesuniecie.Text));
+            }
+        }
+
+        public void Clear(object sender, RoutedEventArgs e)
+        {
+            this.JawnyTEXT.Text = "";
+            this.ZaszyfrowanyTEXT.Text = "";
+            this.Przesuniecie.Text = "";
         }
 
 
-        public static StringBuilder WykonajSzyfrowanie(String text, int s)
+        public static char cipher(char ch, int key)
         {
-            StringBuilder result = new StringBuilder();
-
-            for (int i = 0; i < text.Length; i++)
+            if (!char.IsLetter(ch))
             {
-                if (char.IsUpper(text[i]))
-                {
-                    char ch = (char)(((int)text[i] +
-                                    s - 65) % 26 + 65);
-                    result.Append(ch);
-                }
-                else
-                {
-                    char ch = (char)(((int)text[i] +
-                                    s - 97) % 26 + 97);
-                    result.Append(ch);
-                }
+
+                return ch;
             }
-            return result;
+
+            char d = char.IsUpper(ch) ? 'A' : 'a';
+            return (char)((((ch + key) - d) % 26) + d);
+
+
+        }
+
+
+        public static string Encipher(string input, int key)
+        {
+            string output = string.Empty;
+
+            foreach (char ch in input)
+                output += cipher(ch, key);
+
+            return output;
+        }
+
+        public static string Decipher(string input, int key)
+        {
+            return Encipher(input, 26 - key);
         }
     }
 }

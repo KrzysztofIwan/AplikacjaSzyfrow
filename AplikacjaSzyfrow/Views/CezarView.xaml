@@ -5,15 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AplikacjaSzyfrow.Views"
         mc:Ignorable="d"
-        Title="CezarView" Height="450" Width="800">
-    <Grid>
-        <Button Content="Szyfruj" Click="Szyfrowanie" HorizontalAlignment="Left" Margin="154,250,0,0" VerticalAlignment="Top" Height="50" Width="136"/>
-        <Button Content="Odszyfruj" Click="Odszyfruj" HorizontalAlignment="Left" Margin="510,250,0,0" VerticalAlignment="Top" Height="50" Width="136"/>
-        <Label Content="Szyfr Cezara" FontSize="30" Margin="304,50,304,0" VerticalAlignment="Top"/>
-        <TextBox Name ="JawnyTEXT" Margin="90,171,446,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="63"/>
-        <TextBox Name ="ZaszyfrowanyTEXT" Margin="446,171,90,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="63"/>
-        <Label Content="Tekst do zaszyfrowania" HorizontalAlignment="Left" Margin="157,140,0,0" VerticalAlignment="Top"/>
-        <Label Content="Zaszyfrowany tekst" HorizontalAlignment="Left" Margin="523,140,0,0" VerticalAlignment="Top"/>
+        Title="CezarView" Height="309" Width="800">
+    <Grid Height="277" VerticalAlignment="Top">
+        <Button Content="Szyfruj" Click="Szyfrowanie" HorizontalAlignment="Left" Margin="130,206,0,0" VerticalAlignment="Top" Height="50" Width="136"/>
+        <Button Content="Odszyfruj" Click="Odszyfruj" HorizontalAlignment="Left" Margin="537,206,0,0" VerticalAlignment="Top" Height="50" Width="136"/>
+        <Label Content="Szyfr Cezara" FontSize="30" Margin="304,28,304,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Content="Tekst do zaszyfrowania" HorizontalAlignment="Left" Margin="133,97,0,0" VerticalAlignment="Top"/>
+        <Label Content="Zaszyfrowany tekst" HorizontalAlignment="Left" Margin="550,97,0,0" VerticalAlignment="Top"/>
+        <Label Content="Przesuniecie" HorizontalAlignment="Center" Margin="0,97,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="Przesuniecie" HorizontalAlignment="Center" Margin="0,145,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="76" Height="30"/>
+        <TextBox HorizontalAlignment="Left" Name="JawnyTEXT" Margin="108,128,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" Height="64"/>
+        <TextBox HorizontalAlignment="Left" Name="ZaszyfrowanyTEXT" Margin="515,128,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" Height="64"/>
+        <Button Content="Czyść" Click="Clear" HorizontalAlignment="Center" Margin="0,206,0,0" VerticalAlignment="Top" Height="50" Width="76"/>
 
     </Grid>
 </Window>
