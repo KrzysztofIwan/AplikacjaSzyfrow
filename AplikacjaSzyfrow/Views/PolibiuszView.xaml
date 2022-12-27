@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AplikacjaSzyfrow.Views"
         mc:Ignorable="d"
-        Title="PolibiuszView" Height="450" Width="800">
-    <Grid>
-        <Button Content="Szyfruj" Click ="Szyfrowanie" HorizontalAlignment="Left" Margin="154,250,0,0" VerticalAlignment="Top" Height="50" Width="136"/>
-        <Button Content="Odszyfruj" Click="Odszyfruj" HorizontalAlignment="Left" Margin="510,250,0,0" VerticalAlignment="Top" Height="50" Width="136"/>
-        <Label Content="Szyfr Polibiusza" FontSize="30" Margin="274,50,274,0" VerticalAlignment="Top"/>
-        <TextBox Margin="90,171,446,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="63"/>
-        <TextBox Margin="446,171,90,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="63"/>
-        <Label Content="Tekst do zaszyfrowania" HorizontalAlignment="Left" Margin="157,140,0,0" VerticalAlignment="Top"/>
-        <Label Content="Zaszyfrowany tekst" HorizontalAlignment="Left" Margin="523,140,0,0" VerticalAlignment="Top"/>
+        Title="PolibiuszView" Height="330" Width="500">
+    <Grid Margin="0,0,0,-6">
+        <Label Content="Tekst do zaszyfrowania" HorizontalAlignment="Left" Margin="59,90,0,0" VerticalAlignment="Top"/>
+        <Label Content="Zaszyfrowany tekst" HorizontalAlignment="Left" Margin="310,90,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" x:Name="JawnyTEXT" Margin="35,134,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" Height="64"/>
+        <TextBox x:Name="ZaszyfrowanyTEXT" Margin="275,134,35,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="64"/>
+        <Button Content="Czyść" Click="Clear" Margin="212,212,212,0" VerticalAlignment="Top" Height="50"/>
+        <Label Content="Szyfr Polibiusza" HorizontalAlignment="Center" Height="57" Margin="0,28,0,0" VerticalAlignment="Top" Width="222" HorizontalContentAlignment="Center" FontSize="30"/>
+        <Button Content="Odszyfrowywanie" Click="Odszyfruj" HorizontalAlignment="Left" Margin="320,212,0,0" VerticalAlignment="Top" Height="50" Width="100"/>
+        <Button Content="Szyfrowanie" Click="Szyfrowanie" HorizontalAlignment="Left" Margin="74,212,0,0" VerticalAlignment="Top" Height="50" Width="100"/>
     </Grid>
 </Window>
