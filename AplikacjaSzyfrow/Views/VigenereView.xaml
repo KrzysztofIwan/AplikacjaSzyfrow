@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AplikacjaSzyfrow.Views"
         mc:Ignorable="d"
-        Title="VigenereView" Height="450" Width="800">
-    <Grid>
-        <Button Content="Szyfruj" Click = "Szyfrowanie" HorizontalAlignment="Left" Margin="154,250,0,0" VerticalAlignment="Top" Height="50" Width="136"/>
-        <Button Content="Odszyfruj" Click ="Odszyfruj" HorizontalAlignment="Left" Margin="510,250,0,0" VerticalAlignment="Top" Height="50" Width="136"/>
-        <Label Content="Szyfr Vigenère’a" FontSize="30" Margin="265,50,265,0" VerticalAlignment="Top"/>
-        <TextBox Name ="JawnyTEXT"  Margin="90,171,446,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="63"/>
-        <TextBox Name ="ZaszyfrowanyTEXT" Margin="446,171,90,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="63"/>
-        <Label Content="Tekst do zaszyfrowania" HorizontalAlignment="Left" Margin="157,140,0,0" VerticalAlignment="Top"/>
-        <Label Content="Zaszyfrowany tekst" HorizontalAlignment="Left" Margin="523,140,0,0" VerticalAlignment="Top"/>
+        Title="VigenereView" Height="328" Width="800">
+    <Grid Margin="0,0,0,-6">
+        <Button Content="Szyfruj" Click = "Szyfrowanie" HorizontalAlignment="Left" Margin="154,202,0,0" VerticalAlignment="Top" Height="50" Width="136"/>
+        <Button Content="Odszyfruj" Click ="Odszyfruj" HorizontalAlignment="Left" Margin="510,202,0,0" VerticalAlignment="Top" Height="50" Width="136"/>
+        <Label Content="Szyfr Vigenère’a" FontSize="30" Margin="265,20,265,0" VerticalAlignment="Top"/>
+        <TextBox Name ="JawnyTEXT"  Margin="90,123,446,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="63"/>
+        <TextBox Name ="ZaszyfrowanyTEXT" Margin="446,123,90,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="63"/>
+        <Label Content="Tekst do zaszyfrowania" HorizontalAlignment="Left" Margin="157,92,0,0" VerticalAlignment="Top"/>
+        <Label Content="Zaszyfrowany tekst" HorizontalAlignment="Left" Margin="523,92,0,0" VerticalAlignment="Top"/>
+        <Button Content="Czyść" Click="Clear" Margin="342,202,342,0" VerticalAlignment="Top" Height="50"/>
     </Grid>
 </Window>
