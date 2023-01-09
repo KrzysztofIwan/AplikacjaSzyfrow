@@ -3,10 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AplikacjaSzyfrow.Views"
+        xmlns:local="clr-namespace:AplikacjaSzyfrow"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="Szyfr Playfair" Height="450" Width="800">
+    <Border CornerRadius="35" BorderThickness="20">
     <Grid>
-        
+        <Label Content="Szyfr Playfair" FontFamily="Arial" FontSize="30" HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top"/>
+        <Label Content="Klucz" FontFamily="Arial" FontSize="30" HorizontalAlignment="Left" Margin="429,28,0,0" VerticalAlignment="Top"/>
+        <Button Content="Wykonaj" HorizontalAlignment="Left" Margin="232,217,0,0" VerticalAlignment="Top"/>
+        <Button Content="Losuj Klucz" HorizontalAlignment="Left" Margin="212,300,0,0" VerticalAlignment="Top"/>
     </Grid>
+    </Border>
 </Window>
+
