@@ -5,13 +5,71 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AplikacjaSzyfrow"
         mc:Ignorable="d"
-        Title="Szyfry" Height="300" Width="300">
-    <Grid Margin="-1,0,0,2">
-        <Button Content="Szyfr Cezara" Click="CerazShow"  Margin="26,77,0,0" VerticalAlignment="Top" Height="60" HorizontalAlignment="Left" Width="100"/>
-        <Button Content="Szyfr Polibiusza" Click ="PolibiuszShow" Margin="165,77,0,0" VerticalAlignment="Top" Height="60" HorizontalAlignment="Left" Width="100"/>
-        <Label Content="Wybierz Szyfr" HorizontalAlignment="Left" Margin="104,28,0,0" VerticalAlignment="Top" Width="84"/>
-        <Button Content="Szyfr Vigenère’a" Click="VigenèreShow"  Margin="26,175,0,0" VerticalAlignment="Top" Height="60" HorizontalAlignment="Left" Width="100"/>
-        <Button Content="NOWY SZYFR" Margin="165,175,0,0" VerticalAlignment="Top" Height="60" HorizontalAlignment="Left" Width="100"/>
+        Title="Szyfry" Height="300" Width="252">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="RoundedButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="20" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="0,0,0,2" HorizontalAlignment="Center" Width="237">
+        <Button  FontFamily="Arial" FontSize="15" Style="{DynamicResource RoundedButtonStyle}" Content="Szyfr Cezara" Click="CerazShow"  Margin="15,57,0,0" VerticalAlignment="Top" Height="60" HorizontalAlignment="Left" Width="100"/>
+        <Button  FontFamily="Arial" FontSize="15" Style="{DynamicResource RoundedButtonStyle}" Content="Szyfr Polibiusza" Click ="PolibiuszShow" Margin="15,122,0,0" VerticalAlignment="Top" Height="60" HorizontalAlignment="Left" Width="100"/>
+        <Label   FontWeight="Bold" FontSize="25"  FontFamily="Arial" Content="Wybierz Szyfr" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="200"/>
+        <Button  FontFamily="Arial" FontSize="15" Style="{DynamicResource RoundedButtonStyle}" Content="Szyfr Vigenère’a" Click="VigenèreShow"  Margin="15,187,129,0" VerticalAlignment="Top" Height="60"/>
+        <Button  Click="PlayfairShow" FontFamily="Arial" FontSize="15" Style="{DynamicResource RoundedButtonStyle}" Content="Playfair" Margin="120,57,15,0" VerticalAlignment="Top" Height="60" HorizontalAlignment="Left" Width="100"/>
+        <Button  Click="RSAShow" FontFamily="Arial" FontSize="15" Style="{DynamicResource RoundedButtonStyle}" Content="RSA" VerticalAlignment="Top" Height="60" Margin="120,122,15,0"/>
 
     </Grid>
 </Window>

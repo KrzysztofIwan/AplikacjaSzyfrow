@@ -20,3 +20,7 @@ E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\Views\PolibiuszView.g.cs
 E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\Views\VigenereView.g.cs
 E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\Views\PolibiuszView.baml
 E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\Views\VigenereView.baml
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\Views\PlayfairView.g.cs
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\Views\RSAView.g.cs
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\Views\PlayfairView.baml
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\Views\RSAView.baml

@@ -58,8 +58,14 @@
     <Compile Include="Views\CezarView.xaml.cs">
       <DependentUpon>CezarView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\PlayfairView.xaml.cs">
+      <DependentUpon>PlayfairView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\PolibiuszView.xaml.cs">
       <DependentUpon>PolibiuszView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RSAView.xaml.cs">
+      <DependentUpon>RSAView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\VigenereView.xaml.cs">
       <DependentUpon>VigenereView.xaml</DependentUpon>
@@ -80,7 +86,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\PlayfairView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\PolibiuszView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RSAView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

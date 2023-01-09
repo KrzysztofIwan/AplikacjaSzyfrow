@@ -41,5 +41,15 @@ namespace AplikacjaSzyfrow
             VigenereView page = new VigenereView();
             page.ShowDialog();
         }
+        public void PlayfairShow(object sender, RoutedEventArgs e)
+        {
+            PlayfairView page = new PlayfairView();
+            page.ShowDialog();
+        }
+        public void RSAShow(object sender, RoutedEventArgs e)
+        {
+            RSAView page = new RSAView();
+            page.ShowDialog();
+        }
     }
 }
