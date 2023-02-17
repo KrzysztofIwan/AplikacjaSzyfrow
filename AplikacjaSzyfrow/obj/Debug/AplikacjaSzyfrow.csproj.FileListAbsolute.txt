@@ -24,3 +24,6 @@ E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\Views\PlayfairView.g.cs
 E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\Views\RSAView.g.cs
 E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\Views\PlayfairView.baml
 E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\Views\RSAView.baml
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\bin\Debug\System.ValueTuple.dll
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\bin\Debug\System.ValueTuple.xml
+E:\C#\AplikacjaSzyfrow\AplikacjaSzyfrow\obj\Debug\AplikacjaSzyfrow.csproj.CopyComplete
