@@ -69,7 +69,7 @@
             <Label Content="Szyfr Playfair" FontFamily="Arial" FontSize="30" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top"/>
             <Label Content="Klucz" FontFamily="Arial" FontSize="30" HorizontalAlignment="Left" Margin="417,40,0,0" VerticalAlignment="Top"/>
             <Button Content="Zaszyfruj"  Style="{DynamicResource RoundedButtonStyle}" FontFamily="Arial" HorizontalAlignment="Left" Margin="240,118,0,0" VerticalAlignment="Top"/>
-            <Button Style="{DynamicResource RoundedButtonStyle}" Content="Losuj Klucz" FontFamily="Arial" HorizontalAlignment="Left" Margin="535,326,0,0" VerticalAlignment="Top"/>
+            <Button Style="{DynamicResource RoundedButtonStyle}" Click="Losuj" Content="Losuj Klucz" FontFamily="Arial" HorizontalAlignment="Left" Margin="535,326,0,0" VerticalAlignment="Top"/>
             <Button Content="Odszyfruj" Style="{DynamicResource RoundedButtonStyle}" HorizontalAlignment="Left" Margin="240,205,0,0" VerticalAlignment="Top" Click="Button_Click">
             </Button>
             <TextBox HorizontalAlignment="Left" Margin="23,103,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="166" Height="61"/>
@@ -89,41 +89,41 @@
             <Label Content="2" BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="421,169,0,0" VerticalAlignment="Top" Width="38" Height="26"/>
             <Label Content="3" BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="421,205,0,0" VerticalAlignment="Top" Width="38" Height="26"/>
             <Label Content="4" BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="421,238,0,0" VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="459,133,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="459,169,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="497,169,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="497,133,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="535,133,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="572,133,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="534,169,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="572,169,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="610,133,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="610,169,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="648,133,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="648,169,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="459,205,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="497,205,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="535,205,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="572,205,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="610,205,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="648,205,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="459,238,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="496,238,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="534,238,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="572,238,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="610,238,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="648,238,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="459,273,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="497,273,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="535,273,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="572,273,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="610,273,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="648,273,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="686,273,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="686,238,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="686,205,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="686,169,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
-            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="686,133,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T1"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="459,133,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T2"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="459,169,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T3"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="497,169,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T4"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="497,133,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T5"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="535,133,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T6"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="572,133,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T7"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="534,169,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T8"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="572,169,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T9"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="610,133,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T10"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="610,169,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T11"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="648,133,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T12"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="648,169,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T13"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="459,205,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T14"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="497,205,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T15"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="535,205,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T16"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="572,205,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T17"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="610,205,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T18"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="648,205,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T19"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="459,238,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T20"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="496,238,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T21"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="534,238,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T22"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="572,238,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T23"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="610,238,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T24"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="648,238,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T25"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="459,273,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T26"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="497,273,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T27"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="535,273,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T28"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="572,273,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T29"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="610,273,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T30"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="648,273,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T31"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="686,273,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T32"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="686,238,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T33"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="686,205,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T34"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="686,169,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox x:Name="T35"  BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="686,133,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
         </Grid>
     </Border>
 </Window>
