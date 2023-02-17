@@ -7,13 +7,123 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="Szyfr Playfair" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="RoundedButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="20" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true" Height="31" Width="106">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Border CornerRadius="35" BorderThickness="20">
-    <Grid>
-        <Label Content="Szyfr Playfair" FontFamily="Arial" FontSize="30" HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top"/>
-        <Label Content="Klucz" FontFamily="Arial" FontSize="30" HorizontalAlignment="Left" Margin="429,28,0,0" VerticalAlignment="Top"/>
-        <Button Content="Wykonaj" HorizontalAlignment="Left" Margin="232,217,0,0" VerticalAlignment="Top"/>
-        <Button Content="Losuj Klucz" HorizontalAlignment="Left" Margin="212,300,0,0" VerticalAlignment="Top"/>
-    </Grid>
+        <Grid>
+            <Label Content="Szyfr Playfair" FontFamily="Arial" FontSize="30" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top"/>
+            <Label Content="Klucz" FontFamily="Arial" FontSize="30" HorizontalAlignment="Left" Margin="417,40,0,0" VerticalAlignment="Top"/>
+            <Button Content="Zaszyfruj"  Style="{DynamicResource RoundedButtonStyle}" FontFamily="Arial" HorizontalAlignment="Left" Margin="240,118,0,0" VerticalAlignment="Top"/>
+            <Button Style="{DynamicResource RoundedButtonStyle}" Content="Losuj Klucz" FontFamily="Arial" HorizontalAlignment="Left" Margin="535,326,0,0" VerticalAlignment="Top"/>
+            <Button Content="Odszyfruj" Style="{DynamicResource RoundedButtonStyle}" HorizontalAlignment="Left" Margin="240,205,0,0" VerticalAlignment="Top" Click="Button_Click">
+            </Button>
+            <TextBox HorizontalAlignment="Left" Margin="23,103,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="166" Height="61"/>
+            <TextBox HorizontalAlignment="Left" Margin="23,195,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="166" Height="61"/>
+            <Label Content="Tekst wejściowy" HorizontalAlignment="Left" Margin="23,72,0,0" VerticalAlignment="Top"/>
+            <Label Content="Tekst wyściowy" HorizontalAlignment="Left" Margin="23,169,0,0" VerticalAlignment="Top"/>
+            <Label Content="5" BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="421,273,0,0" VerticalAlignment="Top" Width="38" Height="26"/>
+            <Label Content="7" BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="686,96,0,0" VerticalAlignment="Top" Width="38"/>
+            <Label Content="6" BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="648,96,0,0" VerticalAlignment="Top" Width="38"/>
+            <Label Content="5" BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="610,96,0,0" VerticalAlignment="Top" Width="38"/>
+            <Label Content="4" BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="572,96,0,0" VerticalAlignment="Top" Width="38"/>
+            <Label Content="3" BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="534,96,0,0" VerticalAlignment="Top" Width="38"/>
+            <Label Content="2" BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="497,96,0,0" VerticalAlignment="Top" Width="38"/>
+            <Label Content="1" BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="459,96,0,0" VerticalAlignment="Top" Width="38"/>
+            <Label Content="#" BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="421,96,0,0" VerticalAlignment="Top" Width="38"/>
+            <Label Content="1" BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="421,133,0,0" VerticalAlignment="Top" Width="38" Height="26"/>
+            <Label Content="2" BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="421,169,0,0" VerticalAlignment="Top" Width="38" Height="26"/>
+            <Label Content="3" BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="421,205,0,0" VerticalAlignment="Top" Width="38" Height="26"/>
+            <Label Content="4" BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="421,238,0,0" VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="459,133,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="459,169,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="497,169,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="497,133,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="535,133,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="572,133,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="534,169,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="572,169,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="610,133,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="610,169,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="648,133,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="648,169,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="459,205,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="497,205,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="535,205,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="572,205,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="610,205,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="648,205,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="459,238,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="496,238,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="534,238,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="572,238,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="610,238,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="648,238,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="459,273,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="497,273,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="535,273,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="572,273,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="610,273,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="648,273,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="686,273,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="686,238,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="686,205,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="686,169,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+            <TextBox BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Left" Margin="686,133,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="38" Height="26"/>
+        </Grid>
     </Border>
 </Window>
-

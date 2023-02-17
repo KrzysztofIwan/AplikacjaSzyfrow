@@ -7,7 +7,76 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="Szyfr RSA" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="RoundedButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="20" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
-        
+        <Label Content="Szyf RSA" HorizontalAlignment="Center" Margin="0,30,0,0" FontSize="30" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="28,129,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="187" Height="212"/>
+        <TextBox HorizontalAlignment="Left" Margin="253,129,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="209" Height="212"/>
+        <Label Content="Tekst wejściowy" HorizontalAlignment="Left" Margin="75,103,0,0" VerticalAlignment="Top"/>
+        <Label Content="Tekst wyjściowy" HorizontalAlignment="Left" Margin="311,103,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.249,0.04"/>
+        <TextBox HorizontalAlignment="Left" Margin="517,133,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="214" Height="30"/>
+        <TextBox HorizontalAlignment="Left" Margin="517,187,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="214" Height="30"/>
+        <Label Content="Klucz publiczny" HorizontalAlignment="Left" Margin="585,84,0,0" VerticalAlignment="Top"/>
+        <Button Content="Szyfruj" Style="{DynamicResource RoundedButtonStyle}" FontFamily="Arial" HorizontalAlignment="Left" Margin="499,242,0,0" VerticalAlignment="Top" Height="50" Width="101"/>
+        <Button Content="Odszyfruj" Style="{DynamicResource RoundedButtonStyle}" FontFamily="Arial" HorizontalAlignment="Left" Margin="499,316,0,0" VerticalAlignment="Top" Height="50" Width="101"/>
+        <Button Content="Generuj klucz" Style="{DynamicResource RoundedButtonStyle}" FontFamily="Arial" HorizontalAlignment="Left" Margin="626,242,0,0" VerticalAlignment="Top" Height="50" Width="100"/>
+        <Button Content="Czyść" Style="{DynamicResource RoundedButtonStyle}" FontFamily="Arial" FontSize="15" HorizontalAlignment="Left" Margin="630,316,0,0" VerticalAlignment="Top" Height="50" Width="101"/>
+
     </Grid>
 </Window>
